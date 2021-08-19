@@ -8,16 +8,17 @@ import (
 	"time"
 )
 
+// 暂支持的时间编号格式
 var timeType = map[string]int{
 	"yyMMdd":   1,
 	"yyyyMMdd": 2,
 }
 
 type SeqInfo struct {
-	Module string            `json:"module"`
-	Expr   string            `json:"expr"`
-	Group  map[string]string `json:"group"`
-	Remark string            `json:"remark"`
+	Module string            `json:"module"` // 模块名称
+	Expr   string            `json:"expr"`   // 表达式
+	Group  map[string]string `json:"group"`  // 表达式对应 需要维护的map
+	Remark string            `json:"remark"` // 备注信息
 }
 
 // ISeqData 数据库操作接口
