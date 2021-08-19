@@ -8,11 +8,6 @@ import (
 type SeqDb struct {
 }
 
-var group = map[string]string{
-	"20210818": "000001",
-	"20210817": "000002",
-}
-
 // Data 用于获取数据库所有已存数据
 func (s *SeqDb) Data() []*sequence.SeqInfo {
 	return []*sequence.SeqInfo{}
